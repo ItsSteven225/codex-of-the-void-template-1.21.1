@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "codex-of-the-void",
+	"version": "${version}",
+	"name": "Codex of the Void",
+	"description": "One mod from Serio fully crazy more fully for crazy",
+	"authors": [
+		"ItsSteven225, dammani, pepitoprogamer"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/codex-of-the-void/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.itssteven225.CodexOfTheVoid"
+		],
+		"client": [
+			"com.itssteven225.CodexOfTheVoidClient"
+		],
+		"fabric-datagen": [
+			"com.itssteven225.CodexOfTheVoidDataGenerator"
+		]
+	},
+	"mixins": [
+		"codex-of-the-void.mixins.json",
+		{
+			"config": "codex-of-the-void.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.17.2",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
